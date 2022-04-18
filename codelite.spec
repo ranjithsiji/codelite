@@ -1,5 +1,5 @@
 Name:           codelite
-Version:        16.0.0.1
+Version:        16.0.0
 Release:        1%{?dist}
 License:        GPLv2+
 Group:          Development/Tools
@@ -33,7 +33,7 @@ CodeLite uses a sophisticated, yet intuitive interface which allows
 users to easily create, build and debug complex projects.
 
 %prep
-%setup -n codelite-16.0.0-1
+%setup -q -n codelite-16.0.0-1
 
 %build
 mkdir -p build_release
@@ -62,7 +62,7 @@ Name=%{name}
 GenericName=C/C++ IDE
 Comment=An IDE for creating C/C++ programs
 Exec=%{name} %f
-Icon=codelite.png
+Icon=%{_datadir}/icons/hicolor/32x32/apps/codelite.png
 Terminal=false
 Type=Application
 MimeType=application/x-codelite-workspace;application/x-codelite-project;
